@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">FixNBuy</string>
+    <string name="appLogo">appLogo</string>
+    <string name="app_logo">App Logo</string>
+    <string name="email_or_number">Email or Number</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="full_name">Full Name</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="favourite_categories">FAVOURITE CATEGORIES</string>
+    <string name="what_are_you_looking_for">What are you looking for?</string>
+    <string name="voice_search">Voice Search</string>
+    <string name="search">Search</string>
+    <string name="location_icon">Location Icon</string>
+    <string name="truck_icon">Truck Icon</string>
+    <string name="promo_banner">Promo Banner</string>
+    <string name="home_icon">Home Icon</string>
+    <string name="home">Home</string>
+    <string name="grocery_icon">grocery_icon</string>
+    <string name="grocery">Grocery</string>
+    <string name="cart_icon">Cart Icon</string>
+    <string name="service_icon">Service_icon</string>
+    <string name="services">Services</string>
+    <string name="profile_icon">profile_icon</string>
+    <string name="profile">Profile</string>
+    <string name="oil_png">Oil png</string>
+    <string name="oil">Oil</string>
+    <string name="olive_oil_5_ltr_picture">olive_oil_5_ltr_picture</string>
+    <string name="add_button">add button</string>
+    <string name="olio_orolio_extra_virgin_olive_oil_5l">Olio Orolio Extra Virgin Olive Oil 5L</string>
+
+
+</resources>
