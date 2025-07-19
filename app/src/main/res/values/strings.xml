@@ -30,6 +30,10 @@
     <string name="olive_oil_5_ltr_picture">olive_oil_5_ltr_picture</string>
     <string name="add_button">add button</string>
     <string name="olio_orolio_extra_virgin_olive_oil_5l">Olio Orolio Extra Virgin Olive Oil 5L</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="enter_your_full_name">Enter your full name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="profile_picture">Profile Picture</string>
 
 
 </resources>

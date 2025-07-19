@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "501709961633",
+    "project_id": "fixnbuy-667bc",
+    "storage_bucket": "fixnbuy-667bc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501709961633:android:5593bed2c62c79606e33e0",
+        "android_client_info": {
+          "package_name": "com.example.fixnbuy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJnNMgGdg3d39l9jFLNTd7FjRZNP-n7cQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

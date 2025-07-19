@@ -1,65 +1,105 @@
 package com.example.fixnbuy;
 
+import static android.app.ProgressDialog.show;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class SignUpActivity extends AppCompatActivity {
 
-    TextView signUpToLogin;
-    Button signUpButton;
-    EditText nameEditText, emailEditText, passwordEditText;
+    EditText emailOrNumberSignup, passwordSignup, nameField, confirmPassword;
+    Button signupButton;
+    TextView loginText;
+    ProgressBar signUpProgressBar;
+    FirebaseAuth mAuth;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_up);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
-        signUpToLogin = findViewById(R.id.loginText);
-        signUpToLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent signUpToLogin = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(signUpToLogin);
-                finish();
+        mAuth = FirebaseAuth.getInstance();
+
+        nameField = findViewById(R.id.nameField);
+        emailOrNumberSignup = findViewById(R.id.emailOrNumberSignup);
+        passwordSignup = findViewById(R.id.passwordSignup);
+        confirmPassword = findViewById(R.id.confirmPassword);
+        signupButton = findViewById(R.id.signupButton);
+        loginText = findViewById(R.id.loginText);
+        signUpProgressBar = findViewById(R.id.signUpProgressBar);
+
+        signupButton.setOnClickListener(v -> {
+            String name = nameField.getText().toString().trim();
+            String email = emailOrNumberSignup.getText().toString().trim();
+            String password = passwordSignup.getText().toString().trim();
+            String confirmPass = confirmPassword.getText().toString().trim();
+
+            if(TextUtils.isEmpty(name)){
+                nameField.setError("Name is required");
+                return;
+            }
+
+            if (TextUtils.isEmpty(email)) {
+                emailOrNumberSignup.setError("Email is required");
+                return;
+            }
+
+            if (TextUtils.isEmpty(password)) {
+                passwordSignup.setError("Password is required");
+                return;
+            }
+
+            if (password.length() < 6) {
+                passwordSignup.setError("Password must be at least 6 characters");
+                return;
+            }
+
+            if( !password.equals(confirmPass)) {
+                confirmPassword.setError("Passwords do not match");
+            }else {
+                signUpProgressBar.setVisibility(View.VISIBLE);
+
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener(task -> {
+                            signUpProgressBar.setVisibility(View.GONE);
+                            if (task.isSuccessful()) {
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                Toast.makeText(SignUpActivity.this, "Account created!", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                                finish();
+                            } else {
+                                Toast.makeText(SignUpActivity.this, "Sign up failed: " , Toast.LENGTH_LONG).show();
+                            }
+                        });
             }
         });
 
-        signUpButton = findViewById(R.id.signupButton);
-        nameEditText = findViewById(R.id.nameField);
-        emailEditText = findViewById(R.id.emailOrNumberField);
-        passwordEditText = findViewById(R.id.passwordField);
-
-        signUpButton.setOnClickListener(v -> {
-            String name = nameEditText.getText().toString().trim();
-            String email = emailEditText.getText().toString().trim();
-            String password = passwordEditText.getText().toString().trim();
-
-            if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(getApplicationContext(), "Please provide the information.", Toast.LENGTH_SHORT).show();
-            } else {
-                Intent signupToHome = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(signupToHome);
-            }
+        loginText.setOnClickListener(v -> {
+            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+            finish();
         });
-
     }
 }

@@ -1,6 +1,10 @@
 package com.example.fixnbuy;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +24,11 @@ public class HomeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        ImageView userProfile = findViewById(R.id.Profile);
+        userProfile.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), UserProfileActivity.class));
+        });
+
     }
 }
