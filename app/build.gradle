@@ -8,6 +8,7 @@ android {
     compileSdk 36
 
     defaultConfig {
+        vectorDrawables.useSupportLibrary = true
         applicationId "com.example.fixnbuy"
         minSdk 24
         targetSdk 36

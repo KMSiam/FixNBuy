@@ -99,7 +99,8 @@
         android:text="@string/sign_up"
         android:layout_below="@id/signUpProgressBar"
         android:layout_marginTop="20dp"
-        android:background="@drawable/button_background"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:backgroundTint="@color/red"
         android:textColor="@android:color/white"
         android:padding="12dp"/>
 

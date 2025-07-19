@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     android:layout_margin="12dp"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:background="@color/white"
     tools:context=".LoginActivity">
 
@@ -75,7 +75,8 @@
         android:text="@string/login"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:background="@drawable/button_background"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:backgroundTint="@color/red"
         android:layout_below="@id/passwordField"
         android:layout_marginTop="20dp"
         android:padding="12dp" />

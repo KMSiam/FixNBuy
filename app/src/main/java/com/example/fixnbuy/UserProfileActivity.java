@@ -1,5 +1,6 @@
 package com.example.fixnbuy;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,9 +20,10 @@ public class UserProfileActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     Button signOutButton;
-    TextView textView;
+    TextView showEmailOrNumber, userName;
     FirebaseUser user;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,14 +37,23 @@ public class UserProfileActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         signOutButton = findViewById(R.id.signOutButton);
-        textView = findViewById(R.id.showEmailOrNumber);
+        showEmailOrNumber = findViewById(R.id.showEmailOrNumber);
+        userName = findViewById(R.id.userName);
+
         user = auth.getCurrentUser();
         if(user == null){
             Intent loginIntent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(loginIntent);
             finish();
         }else {
-            textView.setText(user.getEmail());
+            showEmailOrNumber.setText(user.getEmail());
+            String email = user.getEmail();
+            if (email != null && email.contains("@")) {
+                String name = email.substring(0, email.indexOf('@'));
+                userName.setText(name);
+            } else {
+                userName.setText("Unknown User");
+            }
         }
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +64,5 @@ public class UserProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }
