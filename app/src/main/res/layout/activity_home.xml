@@ -38,12 +38,11 @@
                     android:src="@drawable/ic_location" />
 
                 <TextView
+                    android:id="@+id/locationTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="620 Rd Number 9, Dhaka"
-                    android:textSize="14sp"
-                    android:paddingStart="8dp"
-                    tools:ignore="RtlSymmetry" />
+                    android:text="@string/location"
+                    android:textSize="14sp" />
 
                 <View
                     android:layout_width="0dp"
@@ -149,91 +148,7 @@
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"/>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    tools:ignore="UseCompoundDrawables,UselessParent">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:contentDescription="@string/oil_png"
-                        android:src="@drawable/category_oil" />
-                    <TextView
-                        android:text="@string/oil"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    tools:ignore="UseCompoundDrawables,UselessParent">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:contentDescription="@string/oil_png"
-                        android:src="@drawable/category_oil" />
-                    <TextView
-                        android:text="@string/oil"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    tools:ignore="UseCompoundDrawables,UselessParent">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:contentDescription="@string/oil_png"
-                        android:src="@drawable/category_oil" />
-                    <TextView
-                        android:text="@string/oil"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    tools:ignore="UseCompoundDrawables,UselessParent">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:contentDescription="@string/oil_png"
-                        android:src="@drawable/category_oil" />
-                    <TextView
-                        android:text="@string/oil"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"/>
-                </LinearLayout>
-
+                <!-- Repeat this <LinearLayout> block for each category -->
 
             </LinearLayout>
 
@@ -252,7 +167,6 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:layout_columnWeight="1"
-
                     android:background="@drawable/product_card_bg"
                     android:orientation="vertical"
                     android:padding="12dp"
@@ -295,207 +209,6 @@
                         android:background="@drawable/add_btn_bg"
                         android:padding="4dp" />
                 </LinearLayout>
-
-                <!-- Product Card 2 -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
-
-                    android:background="@drawable/product_card_bg"
-                    android:orientation="vertical"
-                    android:padding="12dp"
-                    android:gravity="center_horizontal"
-                    tools:ignore="UselessParent">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:contentDescription="@string/olive_oil_5_ltr_picture"
-                        android:src="@drawable/olive_oil_5_ltr"
-                        android:scaleType="centerInside" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/olio_orolio_extra_virgin_olive_oil_5l"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:maxLines="2"
-                        android:ellipsize="end"
-                        android:gravity="center"
-                        android:layout_marginTop="2dp" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="৳8990"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="#970703"
-                        android:layout_marginTop="4dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:contentDescription="@string/add_button"
-                        android:src="@drawable/ic_add_circle"
-                        android:background="@drawable/add_btn_bg"
-                        android:padding="4dp" />
-                </LinearLayout>
-
-                <!-- Product Card 3 -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
-
-                    android:background="@drawable/product_card_bg"
-                    android:orientation="vertical"
-                    android:padding="12dp"
-                    android:gravity="center_horizontal"
-                    tools:ignore="UselessParent">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:contentDescription="@string/olive_oil_5_ltr_picture"
-                        android:src="@drawable/olive_oil_5_ltr"
-                        android:scaleType="centerInside" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/olio_orolio_extra_virgin_olive_oil_5l"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:maxLines="2"
-                        android:ellipsize="end"
-                        android:gravity="center"
-                        android:layout_marginTop="2dp" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="৳8990"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="#970703"
-                        android:layout_marginTop="4dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:contentDescription="@string/add_button"
-                        android:src="@drawable/ic_add_circle"
-                        android:background="@drawable/add_btn_bg"
-                        android:padding="4dp" />
-                </LinearLayout>
-
-                <!-- Product Card 4 -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
-
-                    android:background="@drawable/product_card_bg"
-                    android:orientation="vertical"
-                    android:padding="12dp"
-                    android:gravity="center_horizontal"
-                    tools:ignore="UselessParent">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:contentDescription="@string/olive_oil_5_ltr_picture"
-                        android:src="@drawable/olive_oil_5_ltr"
-                        android:scaleType="centerInside" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/olio_orolio_extra_virgin_olive_oil_5l"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:maxLines="2"
-                        android:ellipsize="end"
-                        android:gravity="center"
-                        android:layout_marginTop="2dp" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="৳8990"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="#970703"
-                        android:layout_marginTop="4dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:contentDescription="@string/add_button"
-                        android:src="@drawable/ic_add_circle"
-                        android:background="@drawable/add_btn_bg"
-                        android:padding="4dp" />
-                </LinearLayout>
-
-                <!-- Product Card 5 -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:layout_columnWeight="1"
-
-                    android:background="@drawable/product_card_bg"
-                    android:orientation="vertical"
-                    android:padding="12dp"
-                    android:gravity="center_horizontal"
-                    tools:ignore="UselessParent">
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:contentDescription="@string/olive_oil_5_ltr_picture"
-                        android:src="@drawable/olive_oil_5_ltr"
-                        android:scaleType="centerInside" />
-
-                    <TextView
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="@string/olio_orolio_extra_virgin_olive_oil_5l"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:maxLines="2"
-                        android:ellipsize="end"
-                        android:gravity="center"
-                        android:layout_marginTop="2dp" />
-
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="৳8990"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:textColor="#970703"
-                        android:layout_marginTop="4dp" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
-                        android:contentDescription="@string/add_button"
-                        android:src="@drawable/ic_add_circle"
-                        android:background="@drawable/add_btn_bg"
-                        android:padding="4dp" />
-                </LinearLayout>
-
                 <!-- Repeat this <LinearLayout> block for each product -->
             </GridLayout>
 
@@ -519,46 +232,30 @@
 
         <!-- Home -->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
+            style="@style/BtmNavLay"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                style="@style/BtmNavImg"
                 android:contentDescription="@string/home_icon"
                 android:src="@drawable/ic_home" />
             <TextView
                 android:text="@string/home"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+                style="@style/BtmNavText"/>
         </LinearLayout>
 
-        <!-- Deals -->
+        <!-- Grocery -->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
+            style="@style/BtmNavLay"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                style="@style/BtmNavImg"
                 android:contentDescription="@string/grocery_icon"
                 android:src="@drawable/ic_grocery" />
             <TextView
                 android:text="@string/grocery"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+                style="@style/BtmNavText"/>
         </LinearLayout>
 
         <!-- Cart (center icon) -->
@@ -580,48 +277,31 @@
 
         <!-- Category -->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
+            style="@style/BtmNavLay"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                style="@style/BtmNavImg"
                 android:contentDescription="@string/service_icon"
                 android:src="@drawable/ic_service" />
             <TextView
                 android:text="@string/services"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+                style="@style/BtmNavText"/>
         </LinearLayout>
 
         <!-- Profile -->
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
+            style="@style/BtmNavLay"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 android:id="@+id/Profile"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                style="@style/BtmNavImg"
                 android:contentDescription="@string/profile_icon"
-                android:background="?attr/selectableItemBackground"
                 android:src="@drawable/ic_profile" />
             <TextView
                 android:text="@string/profile"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"/>
+                style="@style/BtmNavText"/>
         </LinearLayout>
     </LinearLayout>
 

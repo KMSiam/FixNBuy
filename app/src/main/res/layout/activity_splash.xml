@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:background="@color/background"
     android:gravity="center"
-    tools:context=".SplashActivity"
+    tools:context=".Activity.SplashActivity"
     tools:ignore="ExtraText">
 
     <!--ImageView for the app icon-->
